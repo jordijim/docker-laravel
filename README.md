@@ -37,3 +37,12 @@ Y por último rehacemos la cache de la configuración
 ~~~
 docker-compose exec app php artisan config:cache
 ~~~
+
+###Otra info
+Comando para ejecutar npm del servicio npm
+~~~
+docker-compose run --rm npm install
+docker-compose run --rm npm run dev
+~~~
+
+Si hay problemas de npm a la hora de instalar o run dev, revisar permisos carpeta node_modules.

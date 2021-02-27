@@ -53,6 +53,17 @@ services:
       - mysqldata:/var/lib/mysql/
     networks:
       - mired
+      -
+  #NPM Servicio
+  npm:
+    image: node:latest
+    container_name: npm
+    volumes:
+      - ./:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: [ 'npm', '--no-bin-links' ]
+    networks:
+      - mired
 
 #Docker Networks
 networks:
